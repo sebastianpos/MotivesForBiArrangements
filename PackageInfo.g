@@ -115,6 +115,7 @@ Dependencies := rec(
                    [ "alcove", ">= 2016-09-21" ],
                    [ "M2", ">= 2017.05.01" ],
                    [ "LinearAlgebraForCAP", ">= 2018.02.07" ],
+                   [ "NemoLinearAlgebraForCAP", ">= 0" ],
                    [ "complex", ">= 2017.05.11" ]
                    ],
   SuggestedOtherPackages := [ ],

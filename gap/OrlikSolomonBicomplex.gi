@@ -4,6 +4,8 @@
 #
 ####################################
 
+vec_matrix_category := NemoMatrixCategory( Julia.Nemo.QQ );
+
 InstallGlobalFunction( "ORLIK_SOLOMON_INTERNAL_NR_OF_FLAT",
    function( matroid, flat, rank )
      
@@ -215,7 +217,7 @@ InstallMethod( OrlikSolomonBicomplexRecord,
 	function( m, chi )
 		local matrixcat;
 		
-		matrixcat := MatrixCategory( HomalgFieldOfRationals() );
+		matrixcat := vec_matrix_category;
 		
 		CapCategorySwitchLogicOff( matrixcat );
 		
@@ -1067,7 +1069,7 @@ InstallMethod( RedMultizetaBiOS,
         
 	function( ni_list )
 	
-		return RedMultizetaBiOS( ni_list, MatrixCategory( HomalgFieldOfRationals() ) );
+		return RedMultizetaBiOS( ni_list, vec_matrix_category );
 
 end );
 
@@ -1102,7 +1104,7 @@ InstallMethod( BlueMultizetaBiOS,
         
 	function( ni_list )
 	
-		return BlueMultizetaBiOS( ni_list, MatrixCategory( HomalgFieldOfRationals() ) );
+		return BlueMultizetaBiOS( ni_list, vec_matrix_category );
 
 end );
 
@@ -1137,7 +1139,7 @@ InstallMethod( MultizetaBiOS,
         
 	function( ni_list )
 	
-		return MultizetaBiOS( ni_list, MatrixCategory( HomalgFieldOfRationals() ) );
+		return MultizetaBiOS( ni_list, vec_matrix_category );
 
 end );
 
